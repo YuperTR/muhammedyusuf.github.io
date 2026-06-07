@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Yusuf Yıldız | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="gnome-topbar">
+        <div class="topbar-left">
+            <span class="activities-btn">Activities</span>
+        </div>
+        <div class="topbar-center">
+            <span id="clock">00:00</span>
+        </div>
+        <div class="topbar-right">
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="system-status">
+                <i class="fas fa-network-wired"></i>
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="desktop" id="desktop">
+
+        <div class="window" id="window-terminal" style="top: 50px; left: 50px; z-index: 10;">
+            <div class="window-header">
+                <span class="window-title">yuper@cachyos: ~</span>
+                <div class="window-controls">
+                    <button class="win-btn minimize"><i class="fas fa-minus"></i></button>
+                    <button class="win-btn maximize"><i class="far fa-square"></i></button>
+                    <button class="win-btn close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content terminal-content">
+                <div id="terminal-output"></div>
+                <div class="terminal-line">
+                    <span class="prompt-user">yuper@cachyos</span> <span class="prompt-dir">~</span> <span class="prompt-char">❯</span>
+                    <span id="terminal-cursor" class="cursor">_</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="window-about" style="top: 100px; left: 100px; display: none;">
+            <div class="window-header">
+                <span class="window-title">About Me</span>
+                <div class="window-controls">
+                    <button class="win-btn minimize"><i class="fas fa-minus"></i></button>
+                    <button class="win-btn maximize"><i class="far fa-square"></i></button>
+                    <button class="win-btn close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content markdown-content">
+                <h2>Muhammed Yusuf Yıldız</h2>
+                <p>Hello! I am a student at <strong>Atatürk University</strong> in Oltu, Erzurum, Türkiye.</p>
+                <p>My primary focus lies at the intersection of <strong>Unity Game Development</strong> and <strong>.NET applications</strong>. I specialize in utilizing C# and the Unity engine and building applications using .NET.</p>
+                <p>I am an active Linux user and deeply interested in system optimization and computer hardware.</p>
+            </div>
+        </div>
+
+        <div class="window" id="window-projects" style="top: 80px; left: 400px; display: none;">
+            <div class="window-header">
+                <span class="window-title">GitHub Repositories</span>
+                <div class="window-controls">
+                    <button class="win-btn minimize"><i class="fas fa-minus"></i></button>
+                    <button class="win-btn maximize"><i class="far fa-square"></i></button>
+                    <button class="win-btn close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div id="repo-container" class="repo-grid">
+                    <div class="loading">Fetching data from GitHub...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="window-gallery" style="top: 120px; left: 200px; display: none; width: 600px;">
+            <div class="window-header">
+                <span class="window-title">Visual Gallery</span>
+                <div class="window-controls">
+                    <button class="win-btn minimize"><i class="fas fa-minus"></i></button>
+                    <button class="win-btn maximize"><i class="far fa-square"></i></button>
+                    <button class="win-btn close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="gallery-grid">
+                    <img src="Images/ShootingGame.png" alt="Shooting Game" class="gallery-img">
+                    <img src="Images/AInavigationGame.jpeg" alt="AI Navigation Game" class="gallery-img">
+                    <img src="Images/TerminalAppSearch.png" alt="Terminal App Search" class="gallery-img">
+                    <img src="https://picsum.photos/id/14/400/300" alt="Level Design" class="gallery-img">
+                    <img src="https://picsum.photos/id/14/400/300" alt="Level Design" class="gallery-img">
+                    <img src="https://picsum.photos/id/14/400/300" alt="Level Design" class="gallery-img">
+                    <img src="https://picsum.photos/id/14/400/300" alt="Level Design" class="gallery-img">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <nav class="gnome-dock">
+        <button class="dock-item" data-target="window-terminal" aria-label="Terminal">
+            <i class="fas fa-terminal"></i>
+        </button>
+        <button class="dock-item" data-target="window-about" aria-label="About Me">
+            <i class="fas fa-user"></i>
+        </button>
+        <button class="dock-item" data-target="window-projects" aria-label="Projects">
+            <i class="fab fa-github"></i>
+        </button>
+        <button class="dock-item" data-target="window-gallery" aria-label="Gallery">
+            <i class="fas fa-image"></i>
+        </button>
+        <div class="dock-separator"></div>
+        <a href="https://github.com/YuperTR" target="_blank" class="dock-item social" aria-label="GitHub">
+            <i class="fab fa-github-alt"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammed-yusuf-y%C4%B1ld%C4%B1z-2bb24b299/" target="_blank" class="dock-item social" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.youtube.com/@yupertr" target="_blank" class="dock-item social" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/yupertr/" target="_blank" class="dock-item social" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </nav>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
